@@ -1,12 +1,12 @@
 function start() {
     circle();
-    paralelepiped();
+    parallelepiped();
     ellipse();
     square();
     rectangle();
     right_triangle()
 }
-function paralellepiped() {
+function parallelepiped() {
     var parallelepiped = document.getElementById("parallelepiped");
 
     a = document.getElementById("parallelepiped_a").value;
@@ -18,19 +18,19 @@ function paralellepiped() {
     parallelepiped.style.transform = "skew(" + angle * -1 + "deg)";
 
     document.getElementById("parallelepiped_area").value = (a * b * Math.sin(angle * Math.PI / 180)).toFixed(3);
-    document.getElementById("parallelepiped_h").value = (document.getElementById("parallelepiped_area").value / a).toFixed(3);
+    document.getElementById("parallelepiped_height").value = (document.getElementById("parallelepiped_area").value / a).toFixed(3);
 }
 
 function circle() {
     var circle = document.getElementById("circle");
 
-    r = document.getElementById("circle_r").value;
+    r = document.getElementById("circle_radius").value;
 
     circle.style.height = ((r * 2) * 37.936267) / 10 + "px";
     circle.style.width = ((r * 2) * 37.936267) / 10 + "px";
 
     document.getElementById("circle_area").value = (Math.PI * Math.pow(r, 2)).toFixed(3);
-    document.getElementById("circle_l").value = (2 * Math.PI * r).toFixed(3);
+    document.getElementById("circle_length").value = (2 * Math.PI * r).toFixed(3);
 }
 
 function ellipse() {
@@ -80,13 +80,13 @@ function right_triangle() {
     b = document.getElementById("right_triangle_b").value;
     c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 
-    right_triangle.style.borderBottom = (a * 37.936267) / 10 + "px" + " solid grey";
+    right_triangle.style.borderBottom = (a * 37.936267) / 10 + "px" + " solid black";
     right_triangle.style.borderRight = (b * 37.936267) / 10 + "px" + " solid transparent";
 
     document.getElementById("right_triangle_c").value = c.toFixed(3);
     document.getElementById("right_triangle_area").value = ((a * b) / 2).toFixed(3);
-    document.getElementById("right_triangle_cut_a").value = (Math.asin(a / c) * 180 / Math.PI).toFixed(3) + "°";
-    document.getElementById("right_triangle_cut_b").value = (Math.asin(b / c) * 180 / Math.PI).toFixed(3) + "°";
-    document.getElementById("right_triangle_cut_c").value = 90 + "°";
-    document.getElementById("right_triangle_h").value = ((a * b) / c).toFixed(3);
+    document.getElementById("right_triangle_angle_a").value = (Math.asin(a / c) * 180 / Math.PI).toFixed(3) + "°";
+    document.getElementById("right_triangle_angle_b").value = (Math.asin(b / c) * 180 / Math.PI).toFixed(3) + "°";
+    document.getElementById("right_triangle_angle_c").value = 90 + "°";
+    document.getElementById("right_triangle_height").value = ((a * b) / c).toFixed(3);
 }
