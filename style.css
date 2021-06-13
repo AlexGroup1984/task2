@@ -1,0 +1,51 @@
+.warning{
+    color: red;
+}
+.parallelepiped {
+	width: 100px;
+	height: 50px;
+	transform: skew(-20deg);
+    background-color: black;
+}
+.circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: black;
+}
+.ellipse {
+    height: 50px;
+    width: 100px;
+    border-radius: 100%;
+    background-color: black;
+}
+.square {
+	width: 100px;
+	height: 100px;
+	background: black;
+}
+.rectangle {
+	width: 100px;
+	height: 50px;
+	background: black;
+}
+
+.right_triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid black;
+    border-right: 100px solid transparent;
+}
+.borders {
+    border: 1px solid black;
+}
+.borders_d {
+    border-bottom: 1px dotted black;
+}
+
+span {
+    width: 100px;
+}
+div div div div div {
+    border: 1px dotted black;
+}
